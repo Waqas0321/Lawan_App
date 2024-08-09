@@ -18,7 +18,7 @@ class ArenaINOutButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        width: 89,
+        width: MediaQuery.of(context).size.width * 0.28,
         height: 37,
         decoration: ShapeDecoration(
           color: isSelected ? Colors.black : Colors.white, // Background color

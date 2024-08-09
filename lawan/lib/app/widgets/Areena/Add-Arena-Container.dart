@@ -25,52 +25,64 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100,
-      height: 70,
+      width: MediaQuery.of(context).size.width * 0.28,
+      height: 90,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              Container(
-                width: 40,
-                height: 40,
-                decoration: ShapeDecoration(
-                  color: color,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(80),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 40,
+                  height: 40,
+                  decoration: ShapeDecoration(
+                    color: color,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(80),
+                    ),
                   ),
-                ),
-                child: Center(
-                  child: Text(
-                    count,
-                    style: TextStyle(
-                      color: countcolor,
-                      fontSize: 16,
-                      fontFamily: 'Lufga',
-                      fontWeight: FontWeight.w500,
+                  child: Center(
+                    child: Text(
+                      count,
+                      style: TextStyle(
+                        color: countcolor,
+                        fontSize: 16,
+                        fontFamily: 'Lufga',
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(
-                width: 16,
-              ),
-              if (showline) Image.asset(Images.line),
-            ],
+                SizedBox(
+                  width: 16,
+                ),
+                if (showline) Image.asset(Images.line),
+              ],
+            ),
           ),
           SizedBox(height: 8),
-          Padding(
-            padding: const EdgeInsets.only(left: 6),
-            child: Text(
-              text,
-              style: TextStyle(
-                color: textcolor,
-                fontSize: 14,
-                fontFamily: 'Lufga',
-                fontWeight: fontWeight,
-              ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  text,
+                  style: TextStyle(
+                    color: textcolor,
+                    fontSize: 14,
+                    fontFamily: 'Lufga',
+                    fontWeight: fontWeight,
+                  ),
+                ),
+            
+                SizedBox(
+                  width: 16,
+                ),
+                if (showline) Image.asset(Images.line, color: Colors.transparent,),
+              ],
             ),
           ),
         ],

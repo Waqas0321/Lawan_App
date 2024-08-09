@@ -10,7 +10,6 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 345,
       height: 44,
       padding: const EdgeInsets.only(right: 10, left: 12, bottom: 4),
       decoration: ShapeDecoration(
