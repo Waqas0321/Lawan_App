@@ -58,18 +58,20 @@ class _AddAreena1State extends State<AddAreena1> {
                   children: [
                     Expanded(
                       child: Padding(
-                        padding:  EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.04),
+                        padding:  EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.1),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            CustomCard(
-                              count: '1',
-                              text: Apptext.details,
-                              color: AappColor.bluee,
-                              showline: true,
-                              countcolor: AappColor.white,
-                              textcolor: AappColor.bluee,
-                              fontWeight: FontWeight.w500,
+                            Expanded(
+                              child: CustomCard(
+                                count: '1',
+                                text: Apptext.details,
+                                color: AappColor.bluee,
+                                showline: true,
+                                countcolor: AappColor.white,
+                                textcolor: AappColor.bluee,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                             Expanded(
                               child: CustomCard(
@@ -195,17 +197,22 @@ class _AddAreena1State extends State<AddAreena1> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        ArenaINOutButton(
-                          text: 'Indoor',
-                          isSelected: _selectedButton == 'Indoor',
-                          onPressed: () => _onButtonPressed('Indoor'),
+                        Expanded(
+                          child: ArenaINOutButton(
+                            text: 'Indoor',
+                            isSelected: _selectedButton == 'Indoor',
+                            onPressed: () => _onButtonPressed('Indoor'),
+                          ),
                         ),
                         SizedBox(width: 6),
-                        ArenaINOutButton(
-                          text: 'Outdoor',
-                          isSelected: _selectedButton == 'Outdoor',
-                          onPressed: () => _onButtonPressed('Outdoor'),
+                        Expanded(
+                          child: ArenaINOutButton(
+                            text: 'Outdoor',
+                            isSelected: _selectedButton == 'Outdoor',
+                            onPressed: () => _onButtonPressed('Outdoor'),
+                          ),
                         ),
+                        Expanded(child: SizedBox(width: 70)),
                       ],
                     ),
                     SizedBox(

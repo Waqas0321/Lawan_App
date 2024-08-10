@@ -59,7 +59,7 @@ class CustomCard extends StatelessWidget {
                 SizedBox(
                   width: 16,
                 ),
-                if (showline) Image.asset(Images.line),
+                if (showline) Expanded(child: Image.asset(Images.line)),
               ],
             ),
           ),
@@ -81,7 +81,7 @@ class CustomCard extends StatelessWidget {
                 SizedBox(
                   width: 16,
                 ),
-                if (showline) Image.asset(Images.line, color: Colors.transparent,),
+                if (showline) Expanded(child: Image.asset(Images.line, color: Colors.transparent,)),
               ],
             ),
           ),
